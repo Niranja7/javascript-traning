@@ -1,182 +1,135 @@
-alert();
+alert()
+//Write the output and datatype for below:
 
-// 1.What is the output?
+console.log("10" + 5)    //sring
+console.log(10 + true)  //number
+console.log(false + null)    //number
+console.log("Hello" + undefined)    //string
+console.log([1,2] + 5)      //string
 
-var a = 10; 
-a = 15;
-console.log(a); // Output: 15
+//String + Number
+console.log(typeof("5" + 5))    //string
 
-//What happens here?
-let b = 20;
-//let b = 30; //error
+//Boolean + Number
+console.log(typeof(true + 5))   //number
 
-//What is the output?
-const c = 50;
-console.log(c); //output: 50
+//Array + String
+console.log(typeof([5] + "5"))  //string
 
-//Identify error:
-const x = 10;
-x = 20;
-//not accept reUse,Reintialiazation and ReDeclaration
+//Object + Number
+console.log(typeof({} + 5))     //string
+                                
+//Null + Number
+console.log(typeof(null + 5))   //number
 
-//Output?
-var p = 5;
-var p = 10;
-console.log(p); // Output: 10
+//Convert the following into Number:
+console.log(Number("500"))   //500
+console.log(Number(true))    //1
+console.log(Number(false))   //0
+console.log(Number(null))    //0
+console.log(Number("abc"))   //NaN  
+console.log(Number([100]))    //100
 
-//Output?
-let q = 25;
-q = q + 10;
-console.log(q); // Output: 35
+//Check whether below values are true or false using Boolean()
+console.log(Boolean(""))        //false
+console.log(Boolean("javascript")) //true
+console.log(Boolean(0))         //false
+console.log(Boolean(1))         //true
+console.log(Boolean(null))      //false 
+console.log(Boolean(undefined)) //false
+console.log(Boolean([]))        //true
+console.log(Boolean({}))        //true
 
-//Output?
-const r = 7;
-console.log(r + 3); // Output: 10
+//let mark = 45 Condition:Above 35 → Pass Below 35 → Fail
+//Use if else.
 
-//Fill correct keyword:
-___ a = 10; //var
-   
-
-//Which method prints normal output?
-
-console.log("");
-
-//Which method shows warning?
-
-console.warn("");
-
-//Which method shows error?
-
-console.error("");
-
-//What does this do?
-
-console.clear();
-
-//remove all text from console 
-
-//Section 3: Data Types 
-//Output?
-
-let a = "hello";
-console.log(typeof a);
-
-//Output? string
-
-//Output?
-let b = 100;
-console.log(typeof b);
-
-//Output? number
-
-let c = false;
-console.log(typeof c);
-
-//Output? boolean
-
- // Output?
-let d;
-console.log(d);
-
-//Output? undefined
-
-//What is type of null?
-
-console.log(typeof null);
-
-//Output? object
-
-//Convert string to number: "25"
-let str = "25";
-let num = Number(str); 
-console.log(num); // Output: 25
-
-
-//Create array of 3 fruits.
-
-let fruits = ["apple", "mango", "grapes"];
-
-//Output?
-
-console.log(fruits); // Output: ["apple", "mango", "grapes"]
-console.log(fruits[0]); // Output: "apple"
-console.log(fruits[1]); // Output: "mango"
-console.log(fruits[2]); // Output: "grapes" 
-console.log(fruits[fruits.length - 1]); // Output: "grapes"
-
-
-let arr = ["a","b","c"];
-console.log(arr[1]);       //Output? b
-
-let arr = ["x","y","z"];
-console.log(arr[arr.length-1]);      //Output? z
-
-//How to get first element?
-//Output?
-console.log(arr[0]);      //Output? x
-
-let arr = ["apple","banana"];
-console.log(arr.length);      //Output? 2
-
-//Add new element to array.
- 
-arr.push("orange");
-
-
-Create object with name & age.
-let person ={
-    name:"harish";
-    age: 20;
+let mark = 45
+if(mark > 35){
+    console.log("Pass")
+} 
+else {
+    console.log("Fail")
 }
-//Output?
+//Create a variable:let age = 20
+//Conditions:
+//18 and above → Eligible
+//Otherwise → Not Eligible
 
-console.log(person);      // Output: {name: "harish", age: 20}
+let age = 20
+if(age >= 18){
+    console.log("Eligible")
+}
+else {
+    console.log("Not Eligible")
+}
 
-let obj = {name:"Naveen"};
-console.log(obj.name);   //Output? naveen
+//Find greatest among 3 numbers using if else if.
+//Example:
+let a = 50
+let b = 80
+let c = 30
 
-let obj = {
-  fruits: ["apple","banana"]
-};
-console.log(obj.fruits[1]);   //output? banana
- 
-//How to access last element inside object array?
+if(a >= b && a >= c){
+    console.log("a is greatest")
+} 
+else if(b >= c){
+    console.log("b is greatest")
+}
+else {
+    console.log("c is greatest")
+}
 
-console.log(obj.fruits[obj.fruits.length-1])    //output? banana
+//Using switch statement:
+//red → stop
+//yellow → ready
+//green → go
+let trafficLight = "red"
+switch(trafficLight){
+    case "red":
+        console.log("stop")
+        break
+    case "yellow":
+        console.log("ready")
+        break
+    case "green":
+        console.log("go")
+        break
+    default:
+        console.log("invalid light")
+}
+
+//Create variables:
+
+let username = "admin";
+let password = "1234";
+
+if(username === "admin" && password === "1234"){
+    console.log("Login successful")
+}
+else {
+    console.log("Invalid login")
+}
 
 
-console.log(5 + 3);       //Output? 8
+//Take hour value:
+//let hour = 14
+//Conditions:
+//1–12 → Morning
+//13–15 → Afternoon
+//16–19 → Evening
+//20–24 → Night
+//Use else if.
 
-console.log(10 % 3);     //Output? 1
-
-console.log(2 ** 3);     //Output? 8
-
-console.log(10 / 2);     //output? 5
-
-
-let a = 5;
-a++;                     
-console.log(a);     // a =5+1 =6  
-
-let b = 5;
-let c = b++;
-console.log(b, c);      // b=6, c=5
-
-let x = 5;
-let y = ++x;
-console.log(x, y);     // x=6, y=6
-
-let m = 3;
-let n = m--;
-console.log(m, n);    // m=2, n=3
-
-
-console.log(5 == "5");   //true
-
-console.log(5 === "5");   //false
-O
-console.log(true && false || true);  //true  
-
-
-5 > 3 ? console.log("Yes") : console.log("No");  //yes
-
+let hour = 14
+if(hour >= 1 && hour <= 12){
+    console.log("Morning")
+}
+else if(hour >= 13 && hour <= 15){
+    console.log("Afternoon")
+}
+else if(hour >= 16 && hour <= 19){
+    console.log("Evening")
+}
+else if(hour >= 20 && hour <= 24){
+    console.log("Night")
+}
