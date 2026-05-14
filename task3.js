@@ -1,9 +1,6 @@
 alert()
 
-// Task 3
-
-
-//Print numbers from 1 to 20 using a for loop
+//1
 
 let j = 1
 while(j <= 20){
@@ -11,60 +8,58 @@ while(j <= 20){
     j++
 }
 
+//2
 
-//Odd Numbers
-//Print all odd numbers from 1 to 50.
-
-for(let k = 1; k <= 50; k++){
-    if(k % 2 !== 0){
-        console.log(k)
-    }
+for (let i = 1; i <= 50; i += 2) {
+  console.log(i);
 }
 
-// Print the multiplication table of 7
-let number = 7
-for(let n = 1; n <= 20; n++){
-    console.log(`${number} x ${n} = ${number * n}`)
+//3
+
+for (let i = 1; i <= 20; i++) {
+  console.log(`7 x ${i} = ${7 * i}`);
 }
 
-//Print numbers from 20 to 1 using a while loop
-let x = 20
-while(x >= 1){
-    console.log(x)
-    x--
+
+//4
+
+for (let i = 20; i >= 1; i--) {
+  console.log(i);
 }
 
-// Find the total sum of numbers from 1 to 100
+
+
+//5
+
+
 let sum = 0
 for(let i = 1; i <= 100; i++){
     sum += i
 }
 console.log("Total sum from 1 to 100:", sum)
 
-//Loop through this array and print all values.
+//6
 
 let fruits = ["apple", "banana", "orange", "grapes"];
 for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
 
-//Count how many even numbers are present between 1 to 50.
+
+//7
 
 
-let evenCount = 0;
+let count = 0;
 for (let i = 1; i <= 50; i++) {
-    if (i % 2 === 0) {
-        evenCount++;
-    }
+  if (i % 2 === 0) {
+    count++;
+  }
 }
-console.log("Even numbers between 1 and 50:", evenCount);
+console.log("Even count:", count);
 
-//Print this pattern using loops:
-//*
-//**
-//***
-//**
-//*****
+
+
+//8
 
 for (let row = 1; row <= 5; row++) {
     let line = "";
@@ -74,11 +69,15 @@ for (let row = 1; row <= 5; row++) {
     console.log(line);
 }
 
+//9
+
 function welcome() {
     console.log("Welcome to JavaScript");
 }
 
 welcome();
+
+//10
 
 function greet(name) {
     console.log("Hello " + name);
@@ -86,11 +85,16 @@ function greet(name) {
 
 greet("Naveen");
 
+
+//11
+
 function addNumbers(a, b) {
     return a + b;
 }
 
 console.log(addNumbers(10, 20));
+
+//12
 
 function addSalaryBonus(salary, bonus) {
     return salary + bonus;
@@ -98,14 +102,30 @@ function addSalaryBonus(salary, bonus) {
 
 console.log(addSalaryBonus(50000, 5000));
 
+
+//13
+
 let student = {
-    name: "Rahul",
-    course: "JavaScript",
-    marks: 95ber(a, b) {
-    return a > b ? a : b;
+  name: "Rahul",
+  course: "JavaScript",
+  marks: 95
+};
+
+for (let key in student) {
+  console.log(`${key}: ${student[key]}`);
 }
 
-console.log(largerNumber(10, 50));  //output: 50
+
+//14
+
+function largest(a, b, c, d) {
+  return Math.max(a, b, c, d);
+}
+
+console.log(largest(10, 40, 30, 2000));
+
+
+//15
 
 let employee = {
     name: "Rahul",
@@ -121,6 +141,3 @@ function printEmployeeDetails(emp, bonus) {
 }
 
 printEmployeeDetails(employee, 5000);  
-
-//output: Employee Name: Rahul, Department: JavaScript, Salary: 50000, Salary after bonus: 55000
-
